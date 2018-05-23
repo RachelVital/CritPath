@@ -20,7 +20,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 /**
- * Classe de teste
+ * Classe de teste.
  * 
  * @author Rachel
  *
