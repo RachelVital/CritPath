@@ -19,6 +19,12 @@ import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 
+/**
+ * Classe de teste
+ * 
+ * @author Rachel
+ *
+ */
 public class InMemoryTest {
 
 
@@ -77,7 +83,7 @@ public class InMemoryTest {
 		  
 		  ClassLoader classLoader = getClass().getClassLoader();
 		  
-		// read tasks from a file
+		  // read tasks from a file
 		   File fileTasks = new File(classLoader.getResource("tarefas_Liberar_versao_producao.csv").getFile());
 		   
 		  
