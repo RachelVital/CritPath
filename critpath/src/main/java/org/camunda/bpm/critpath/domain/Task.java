@@ -2,6 +2,7 @@ package org.camunda.bpm.critpath.domain;
 
 import java.util.List;
 
+
 public class Task {
 	
 	private int id;

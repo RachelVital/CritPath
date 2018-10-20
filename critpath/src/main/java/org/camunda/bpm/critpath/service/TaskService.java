@@ -6,13 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.camunda.bpm.critpath.domain.NetworkPath;
 import org.camunda.bpm.critpath.domain.Task;
 import org.camunda.bpm.critpath.domain.TaskDependence;
 import org.camunda.bpm.critpath.domain.enumerations.DependenceType;
+
 
 public class TaskService {
 	
@@ -118,6 +118,7 @@ public class TaskService {
 	 * 
 	 * @param listaTarefas
 	 * @return	Lista de caminhos ordenados
+	 * @deprecated
 	 */
 	public List<NetworkPath> criticalPath(List<Task> listaTarefas){
 		
