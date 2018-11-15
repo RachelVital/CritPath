@@ -6,7 +6,11 @@ import java.util.List;
 import org.prisma.kip.domain.projectInstance.Task;
 
 
-
+/**
+ * Representa os caminhos
+ * @author Rachel
+ *
+ */
 public class NetworkPath implements Comparable<NetworkPath> {
 	
 	/**

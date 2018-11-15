@@ -2,9 +2,18 @@ package org.prisma.critpath.domain;
 
 import java.util.List;
 
+/**
+ * Representa os repositorios pré cadastrados do usuário
+ * 
+ * @author Rachel
+ *
+ */
 public class Repository {
 
     private long id;
+    /**
+     * Dono de Repositorio no Github
+     */
     private String owner;
     private String repository;
     private String zenhubRepoId;
