@@ -99,6 +99,29 @@ public class InMemoryTest {
 		  System.out.println(">>> lista caminhos : " + listaCaminhos);
 
 	  }
+	  
+	  @Test
+	  @Deployment(resources = "process.bpmn")
+	  public void testNovoProjeto() throws SQLException {
+		  
+		  ClassLoader classLoader = getClass().getClassLoader();
+		  
+		  // read tasks from a file
+		   File fileTasks = new File(classLoader.getResource("tarefas_GST_Estudo_Preliminar_Novo_Projeto.csv").getFile());
+		   
+		  
+		  List<Task> listaTarefas = TaskService.getInstance().loadTaskFromFile(fileTasks);
+		  
+		  List<NetworkPath> listaCaminhos = TaskService.getInstance().criticalPath(listaTarefas);
+		  
+		  Collections.sort(listaCaminhos);
+		 
+		  Collections.reverse(listaCaminhos);
+		
+		  
+		  System.out.println(">>> lista caminhos : " + listaCaminhos);
+
+	  }
 
 
 }

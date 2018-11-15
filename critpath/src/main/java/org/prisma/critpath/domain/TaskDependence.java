@@ -1,7 +1,10 @@
-package org.camunda.bpm.critpath.domain;
+package org.prisma.critpath.domain;
 
+
+import org.camunda.bpm.critpath.domain.Task;
 import org.camunda.bpm.critpath.domain.enumerations.DependenceType;
 import org.camunda.bpm.critpath.domain.enumerations.LeadLagType;
+
 
 public class TaskDependence {
 	
