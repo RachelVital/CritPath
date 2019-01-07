@@ -16,7 +16,7 @@ public class NetworkPath implements Comparable<NetworkPath> {
 	/**
 	 * Mede o tamanho do caminho (esforço)
 	 */
-	private int length;
+	private long length;
 	
 	private int remainingLenght;
 	
@@ -27,8 +27,26 @@ public class NetworkPath implements Comparable<NetworkPath> {
 		length = 0;
 		tasks = new ArrayList<Task>();
 	}
+	
+	public NetworkPath(List<Task> pathList) {
+		super();
+		length = 0;
+		tasks = pathList;
+		
+		for(Task task: pathList) {
+			if(task.getEffort()!= null && task.getEffort().getEstimated() != null) {
+				this.addLength(task.getEffort().getEstimated());
+			}else {
+				// Se não tiver esforço definido, vou considerar esforço igual a ZERO
+				this.addLength(0);
+			}
+			
+			
+		}
+		
+	}
 
-	public int getLength() {
+	public long getLength() {
 		return length;
 	}
 
@@ -76,14 +94,17 @@ public class NetworkPath implements Comparable<NetworkPath> {
 	 * 
 	 * @param length
 	 */
-	public void addLength(int length) {
+	public void addLength(long length) {
 		this.length += length;
 	}
 	
 
     public int compareTo(NetworkPath path) {
 		 
-	     return this.remainingLenght - path.remainingLenght;
+	     //return this.remainingLenght - path.remainingLenght;
+    	long effort = this.length - path.length; 
+    	
+    	return Integer.parseInt(effort+ "") ;
     }
 
     @Override

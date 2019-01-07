@@ -1,0 +1,73 @@
+#;Tipo;Situação;Título;Tempo estimado;Tempo gasto;Atribuído para;Categoria;Prioridade;Tarefas relacionadas
+23075;DSV;Done;[ERRO] - [DocCob] Cancelar Doc Cob;5,00;1,90;Pedro  Rafael;"";Imediata;copiado #22918
+23085;DSV;Done;[ERRO] - [DocCob] Gerar email Proforma Invoice;12,00;0,50;Pedro  Rafael;"";Imediata;copiado #22953
+23132;DSV;Done;Pagina Inicial - Ajustar Imagem;1,00;1,30;Pedro  Rafael;"";Imediata;copiado #23070, copiada #23133
+23134;DSV;Done;Remocao de Status Duplicados na tela de fatura ;1,00;0,60;Pedro  Rafael;"";Imediata;copiado #23133, copiada #23135
+23135;DSV;Done;Rever mensagens de acoes na tela de Invoice (ex.: billingDocument.created) ;1,00;0,60;Pedro  Rafael;"";Imediata;copiado #23134, copiada #23136
+23136;DSV;Done;Bug: Liberar evento ao liberar doc cob quando a invoice teve um event service incluido/excluido ;2,00;1,00;Pedro  Rafael;"";Imediata;copiado #23135, copiada #23137
+23140;DSV;Done;Email proforma (usar o valor real);1,00;0,50;Pedro  Rafael;"";Imediata;copiado #23138, copiada #23141
+23141;DSV;Done;Evento PosPago/Sem Solicitacao nao guarda valor real;2,00;1,00;Pedro  Rafael;"";Imediata;copiado #23140, copiada #23142
+23143;DSV;Done;[Invoice] Incluir Tipo de Execucao na Regra de compatibilidade de Eventos ;2,00;1,00;Pedro  Rafael;"";Imediata;copiado #23142, copiada #23144
+23144;DSV;Done;Melhorar formatacao das mensagem da regra de compatibilidade ;1,00;0,50;Pedro  Rafael;"";Imediata;copiado #23143, copiada #23146
+23194;DSV;Done;[ERRO] - Contrato não pode sobrepor uma vigência ativa;"";0;Guilherme Melo;"";Imediata;""
+23137;DSV;Done;[ServiceInstance] Controlar exibicao do botao remover ;1,00;1,00;Pedro  Rafael;"";Urgente;copiado #23136, copiada #23138
+23138;DSV;Done;[Invoice] Adicionar o status do evento na tela de edicao da invoice ;1,00;1,00;Pedro  Rafael;"";Urgente;copiado #23137, copiada #23140
+23142;DSV;Done;Na tela de Invoice exibir valores estimado e real (atualmente exibe apenas estimado);1,00;1,50;Pedro  Rafael;"";Urgente;copiado #23141, copiada #23143
+23146;DSV;Done;Rever permanencia da mensagem de erro na tela ;2,00;0,50;Pedro  Rafael;"";Urgente;copiado #23144, copiada #23147
+23068;DSV;Done;[ERRO] - [ServiceInstance] Implementar funcionalidade 'Registrar Execução Manual de ServiceInstance' <<Ver detalhes>>;8,00;4,70;Pedro  Rafael;"";Alta;copiado #22910
+23125;DSV;Done;[SERVICE_INSTANCE] Permitir somente criação de evento para contrato ativo;3,00;0,97;Guilherme Melo;"";Normal;copiado #22934
+23128;DSV;Done;"[ServiceType] Rever obrigatoriedade do campo ""tipo"" de variavel";1,00;0,50;Guilherme Melo;"";Normal;""
+23207;ANA;Done;Reunião de análise para a integração Billing x EBS;16,00;3,00;Rachel Vital;"";Normal;copiado #23174
+23222;Reunião;Done;apresentação das evolutivas do Billing;"";4,40;Carlos Magno;"";Normal;""
+23223;Reunião;Done;apresentação das evolutivas para a equipe;"";1,50;Carlos Magno;"";Normal;""
+23070;DSV;Rejeitada;[ERRO] - [Contract, ContractItemPayment, ServiceInstance, Invoice] - Incluir campo 'emissao doc cob automatico' <<ver detalhes>>;1,00;0;Pedro  Rafael;"";Imediata;copiado #22911, copiada #23132
+23198;DSV;Rejeitada;Ordenacao de Listas (fazer uma revisao no sistema);"";0;"";"";Imediata;""
+23186;DSV;Rejeitada;[ERRO] - [CONTRACT] Implementar ativar e desativar registro;1,00;0,20;"";"";Baixa;copiado #23081
+23189;DSV;Rejeitada;[ERRO] - [CONTRACT] Implementar ativar e desativar registro;1,00;0;"";"";Baixa;copiado #23081
+22954;DSV;Waiting for fixing;[DocCob] Manter Files do DocCob;8,00;17,20;Pedro  Rafael;"";Média;copiado #22921, copiada #23187
+22933;DSV;Waiting for fixing;[CONTRACT] Implementar ativar e desativar registro;1,00;6,20;Guilherme Melo;"";Baixa;copiado #22932, copiada #22934, copiada #23081
+22942;DSV;Waiting for fixing;[INVOICE] Manter versionamento ao salvar ou atualizar o registro;"";0;Guilherme Melo;"";Baixa;copiado #22941, copiada #22943
+22943;DSV;Waiting for fixing;[BILLING_RULE] Manter versionamento ao salvar ou atualizar o registro;"";0,10;Guilherme Melo;"";Baixa;copiado #22942, copiada #23188
+23133;DSV;To Test;Ordenacao de Listas (fazer uma revisao no sistema);"";0;Guilherme Melo;"";Imediata;copiado #23132, copiada #23134
+23187;DSV;To Test;[ERRO] - [DocCob] Manter Files do DocCob;"";1,50;Pedro  Rafael;"";Imediata;copiado #22954
+23195;DSV;To Test;[ERRO] - Na criação do evento de serviço, não aparece o contrato para o cliente MSC;"";2,00;Ulisses Telemaco;"";Imediata;""
+23149;DSV;To Test;Criar/Ajustar Entidades, DTOs, Mapper e liquibase;5,00;17,00;Pedro  Rafael;"";Urgente;bloqueia #23151, bloqueia #23154, bloqueia #23155, bloqueia #23166, copiado #23148
+23151;DSV;To Test;CRUD BillingDocumentBuilderConfiguration;4,00;8,00;Pedro  Rafael;"";Urgente;relacionado a #23153, bloqueado por #23149, bloqueia #23152, bloqueia #23159
+23152;DSV;To Test;CRUD 'BillingDocumentWireTransferBuilderConfiguration' ;4,00;7,00;Pedro  Rafael;"";Urgente;bloqueado por #23151
+23153;DSV;To Test; 'BillingDocumentItauPaymentSlipBuilderConfiguration';8,00;4,50;Pedro  Rafael;"";Urgente;relacionado a #23151
+23154;DSV;To Test;CRUD Contract e CRUD ContractItemPayment;13,00;6,00;Pedro  Rafael;"";Muito Alta;bloqueado por #23149, copiada #23155
+23155;DSV;To Test;[Doc Cobranca] Criar estruruta do BillingDocumentCreationStrategy;3,00;1,00;Pedro  Rafael;"";Muito Alta;bloqueado por #23149, bloqueia #23156, bloqueia #23157, bloqueia #23160, copiado #23154
+23190;DSV;To Test;[ERRO] - [Invoice] Implementar 'Abrir Fatura'. Muda o status e habilita a inclusao/remocao de itens de serviço.;"";4,00;Guilherme Melo;"";Alta;""
+23148;DSV;To Test;[GERAL - LAYOUT] Adicionar popover nas diretivas de exibicao de status ;8,00;13,00;Guilherme Melo;"";Média;copiado #23147, copiada #23149
+23164;DSV;Doing;Automatização de Deploy ;24,00;0;Ulisses Telemaco;"";Urgente;copiado #23163, copiada #23165
+23156;DSV;Doing;[Doc Cobranca] Implementar classe BillingDocumentWireTransferCreationStrategy;5,00;0;Pedro  Rafael;"";Muito Alta;bloqueado por #23155
+23158;DSV;Doing;[Doc Cobranca] Registro o BillingDocumentItauPaymentSlip na API do Itau ;24,00;0;Ulisses Telemaco;"";Muito Alta;bloqueia #23161, copiado #23157, copiada #23159
+23266;DSV;Doing;[ERRO] - Mesmo contrato, associado a um cliente, não pode sobrepor uma vigência ativa;"";0;Guilherme Melo;"";Muito Alta;""
+23147;DSV;Doing;[GERAL - LAYOUT] Criar componente de roadmap das entidades (ServiceInstance, Invoice, BillingDocument) ;8,00;0;Guilherme Melo;"";Média;copiado #23146, copiada #23148
+22983;ANA;Doing;Mapeamento da integração da NF de Serviço com o EBS;"";26,90;Carlos Magno;"";Normal;copiada #22991
+22991;ANA;Doing;Análise e especificação da geração da NF de Serviço;"";9,50;Anderson Tavares;"";Normal;copiado #22983
+23179;ANA;Doing;Configurar no Billing (ambiente de Teste) os cenários reias;16,00;7,90;Rafael Monteiro;"";Normal;copiada #23227
+23227;ANA;Doing;Mapear os cenários reais para ser inseridos no Billing;16,00;22,05;Rafael Monteiro;"";Normal;copiado #23179
+23272;TST;Doing;Testes nas tarefas da sprint atual;"";6,00;Carlos Magno;"";Normal;""
+23157;DSV;To Do - Ready;[Doc Cobranca] Implementar classe BillingDocumentItauPaymentSlipCreationStrategy ;10,00;0;"";"";Muito Alta;bloqueado por #23155, copiada #23158
+23268;DSV;To Do - Ready;[ERRO] - Sistema não deve permitir associar o mesmo contrato como o contrato pai;"";0;Guilherme Melo;"";Muito Alta;""
+23159;DSV;To Do - Ready;Geracao Manual de DocCob - Ajustar;3,00;0;"";"";Alta;bloqueado por #23151, copiado #23158, copiada #23160
+23160;DSV;To Do - Ready; Geracao Automatica de DocCob - Ajustar;4,00;0;"";"";Alta;bloqueado por #23155, copiado #23159, copiada #23161
+23161;DSV;To Do - Ready;Emissao de Boleto Itau (PDF) ;20,00;0;"";"";Alta;bloqueado por #23158, bloqueia #23162, copiado #23160
+23162;DSV;To Do - Ready;Email Proforma Invoice com anexo caso seja boleto;8,00;0;"";"";Alta;bloqueado por #23161
+23163;DSV;To Do - Ready;Criar mecanismo para evitar Liquidacao Manual errada;2,00;0;"";"";Alta;copiada #23164
+23165;DSV;To Do - Ready;Manter Parâmetros de Configuração de Sistema;8,00;0;"";"";Média;copiado #23164, copiada #23166
+23166;DSV;To Do - Ready;Criar modal de detalhes do BillingDocument;8,00;0;"";"";Média;bloqueado por #23149, copiado #23165, copiada #23174
+23127;DSV;To Do - Ready;[ServiceType] Implementar regra nos nomes dos campos data, cdata e paramContract;2,00;0;"";"";Normal;""
+23174;ANA;To Do - Ready;Mapeamento da Liquidação de Boletos Itaú;16,00;3,38;"";"";Normal;copiado #23166, copiada #23207
+23262;DSV;To Do - Ready;Ordenação de Listas e Resultados de Pesquisa;"";0;"";"";Normal;""
+23264;DSV;To Do - Ready;Ajustar o status do evento na visualização ou edição da fatura.;"";0;"";"";Normal;""
+23265;DSV;To Do - Ready;Ajustar os botões do documento de cobrança com status emitido, associado a uma fatura;"";0;"";"";Normal;""
+23269;DSV;To Do - Ready;A coluna valor, no resultado da busca das faturas, deve apresentar o valor executado, caso não possua, exibir o valor estimado;"";0;"";"";Normal;""
+22790;DSV;To Do - Ready;[Invoice] Implemetar botao 'Configurar Colunas' em cada tabela de Tipo de Serviço;5,00;0;"";"";Baixa;copiada #22908, copiada #22925
+22949;DSV;To Do - Ready;[ServiceInstance] Ajustar a busca de Contratos no registro manual de ServiceInstance;"";0;"";"";Baixa;""
+23011;DSV;To Do - Ready;Renomear PaymentMethod para BillingDocumentType;3,00;0;"";"";Baixa;""
+23012;DSV;To Do - Ready;Renomear e alterar tipo do atributo payDay para paymentDay;2,00;0;Guilherme Melo;"";Baixa;""
+23013;DSV;To Do - Ready;Incluir constrainst liquibase para nao permitir remover uma Invoice que tenha um ServiceInstance associado;1,00;0;"";"";Baixa;""
+23126;DSV;To Do - Ready;[ClientContract] Exibir status (Ativoi/Inativo) dos contratos na lista de contratos;1,00;0;Guilherme Melo;"";Baixa;""
+23188;DSV;To Do - Ready;[ERRO] - [BILLING_RULE] Manter versionamento ao salvar ou atualizar o registro;"";0;"";"";Baixa;copiado #22943

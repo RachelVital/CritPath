@@ -1,4 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 
@@ -34,46 +37,22 @@
 		<link rel="stylesheet" href="css/magnific-popup.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/main.css">
+		
+		
+		<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+		
+		
+		
 	</head>
 	<body>
 	
-	<script>
-function chooseRepository(val) {
-   
-    switch(val) {
-    case 'carloseduardov8@viajato':
-    	document.getElementById("owner").value = "carloseduardov8";
-    	document.getElementById("repository").value = "Viajato";
-    	document.getElementById("zenhubRepoId").value = "147525587";
-    	document.getElementById("iteration").value = "";
-    	break;
-    case 'gfrebello@qs-trip-planning-procedure':
-    	document.getElementById("owner").value = "gfrebello";
-    	document.getElementById("repository").value = "qs-trip-planning-procedure";
-    	document.getElementById("zenhubRepoId").value = "147525741";
-    	document.getElementById("iteration").value = "";
-        break;
-    case 'RachelVital@CritPathWeb':
-	    document.getElementById("owner").value = "RachelVital";
-		document.getElementById("repository").value = "CritPathWeb";
-		document.getElementById("zenhubRepoId").value = "132211103";
-		document.getElementById("iteration").value = "";
-	    break;
-    case 'utelemaco@prisma-sandbox-project':
-	    document.getElementById("owner").value = "utelemaco";
-		document.getElementById("repository").value = "prisma-sandbox-project";
-		document.getElementById("zenhubRepoId").value = "141082272";
-		document.getElementById("iteration").value = "";
-	    break;   
-    default:
-    	document.getElementById("owner").value = "";
-		document.getElementById("repository").value = "";
-		document.getElementById("zenhubRepoId").value = "";
-		document.getElementById("iteration").value = "";
-      
-	}
-}
-</script>
+	
 	
 	
 		<div class="main-wrapper-first relative">
@@ -115,56 +94,47 @@ function chooseRepository(val) {
 			<!-- Start Align Area -->
 			<div class="white-bg">
 		
-					<div class="section-top-border">
-						<div class="row">
-							<div class="col-lg-8 col-md-8 mb-40">
-									<div class="form-group mb-40 rounded" style="background-color: rgba(0,0,255,0.3)">
-								<h4 class="mb-5"><small> Repositórios Cadastrados: </small></h4>
+			<div class="section-top-border">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 mb-40">
+							<div class="form-group mb-40 rounded" style="background-color: rgba(0,0,255,0.3)">
+						<h4 class="mb-5"><small> Selecione um arquivo para ser importado: </small></h4>
+						
+						
+						
+						
+							<form id="sampleUploadFrm" action="/critpath/upload.html" method="POST" enctype="multipart/form-data">
+			
+				                <!-- COMPONENT START -->
+				                <div class="form-group">
+				                    
+				                      
+					                     <input type="file" name="file" class="form-control" /> 
+					                
+				            
+				                </div>
+
+				                <!-- COMPONENT END -->
+				                <div class="form-group">
+				                    <input type="submit" value="Enviar" id="uploadBtn2" class="genric-btn primary circle">
+				               
+									<button type="reset" class="genric-btn primary circle">Reset</button>
+				                
+				                </div>
+				
+				            </form>
+													
+									
+									
+									
+									
 								
-									  <select class="form-control" onchange="chooseRepository(this.value)" id="sel1">
-									    <option value='#' selected>Selecione uma opção</option>
-									    <option>carloseduardov8@viajato</option>
-									    <option>gfrebello@qs-trip-planning-procedure</option>
-									    <option>RachelVital@CritPathWeb</option>
-									    <option>utelemaco@prisma-sandbox-project</option>
-									  </select>
-									  <br>
-									  <br>
-									  <br>
 									</div>
 									
-						
-							
-								 <div class="class="mb-5" ><h4 ><small> Informe os dados do Repositório no Github </small></h4> </div>
-								
-								<form action="/critpath/consultaDadosRepositorioSubmit.html" method="get">
-								 <!-- <form action="#" th:action="@{/consultaDadosRepositorioSubmit.html}" th:object="${Repository}" method="get"> -->
-									<div class="mt-10">
-										 <label for="owner" class="col-sm-4 col-form-label col-form-label-sm">Dono do Repositório :</label>
-										<input type="text" th:field="*{owner}" name="owner" id="owner" placeholder="Dono do Repositório" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Owner'" required class="form-control rounded">
-									</div>
-									<div class="mt-10">
-										<label for="repository" class="col-sm-4 col-form-label col-form-label-sm">Repositório :</label>
-										<input type="text" th:field="*{repository}" id="repository" name="repository"  placeholder="Repositório" onfocus="this.placeholder = ''" onblur="this.placeholder = 'repository'" required class="form-control">
-									</div>
-									<div class="mt-10">
-										<label for="zenhubRepoId" class="col-sm-4 col-form-label col-form-label-sm">ZenHub ID :</label>
-										<input type="text" th:field="*{zenhubRepoId}" id="zenhubRepoId" name="zenhubRepoId" placeholder="Zen hub RepoID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ZenHub Repo ID'" required class="form-control">
-									</div>
-									<div class="mt-10">
-										<label for="iteration" class="col-sm-4 col-form-label col-form-label-sm">Iteration :</label>
-										<input type="text" th:field="*{iterationName}" id="iteration" name="iterationName" placeholder="Iteração" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Iteração'" class="form-control">
-									</div>
+									<!-- Start Align Area -->
+			<div class="white-bg">
 		
-									<div class="button-group-area mt-10">
-										<input type="submit" value="Pesquisar no Github" class="genric-btn primary circle">
-										<input type="reset" value="Reset" class="genric-btn primary circle" />
-									</div>
-								</form>
-							</div>
-				
-							</div>
-						</div>
+			
 						
 						<!-- Resultado -->
 							 
@@ -187,19 +157,19 @@ function chooseRepository(val) {
 							    <tr>
 							        
 							
-							            <th scope="row" class="border border-primary p-3 mb-2 bg-warning text-dark text-center" style="width:10%">
+							            <th scope="row" class="border border-primary p-3 mb-2 bg-warning text-dark text-center" style="width:10%;  heigth: 50%;">
 							            	<h6><small>  Esforço remanescente: </small></h6><h6>${networkPath.remainingLenght}</h6>
 							            	<h6><small>  Esforço total: </small></h6><h6>${networkPath.length}</h6> 
 							            	<h6><small>  Progresso: </small></h6>
 							            	<div class="progress">
 											  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: ${(networkPath.remainingLenght/networkPath.length)*100}%"></div>
 											</div>
-							            	
+							            
 							            </th>
 							           
 							            <c:forEach items="${networkPath.tasks}" var="task">
 
-								            <td style="width:10%" class="border border-primary rounded">
+								            <td style="width:10% height=50%" class="border border-primary rounded">
 								            	<h6> <small> 
 								            		<b>Tarefa</b> <br> 
 								            		${task.name}
@@ -249,10 +219,10 @@ function chooseRepository(val) {
 								                
 									            
 									           <span class="text-white bg-dark text-center rounded-circle align-middle">${task.effort.estimated} </span> 
-										            <c:if test = "${fn:toUpperCase(task.status) != 'TO DO'}">
-										           
 										        
-										           		<img src="img/personMaleIcon.png" style="width:20%; " alt="" class="rounded-circle"/>
+										           <c:if test="${not empty task.performer}"> 
+										        
+										           		<img src="img/personMaleIcon.png" style="width:20%; " alt="${task.performer.name}" title="${task.performer.name}" class="rounded-circle"/>
 										           </c:if> 
 									       </td>
 								
